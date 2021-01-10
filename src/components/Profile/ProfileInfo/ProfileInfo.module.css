@@ -1,0 +1,94 @@
+.headerImg {
+    height: 200px;
+    padding-bottom: 10px;
+}
+
+.headerImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.containerInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.profileImage {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.profileImage img {
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.myName {
+    text-transform: uppercase;
+}
+
+.profileInfo {
+    width: 65%;
+    padding-left: 20px;
+}
+
+.profileInfo div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.profileInfo .Contact {
+    padding-left: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.input {
+    height: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.formErrors {
+    border: red 1px solid;
+    padding: 5px;
+    color: red;
+}
+
+.icon {
+    color: #555;
+    padding: 0;
+    line-height: 30px;
+    width: 260px;
+    margin: auto;
+    display: flex;
+    cursor: pointer;
+}
+
+.labelFile:hover, .icon:focus {
+    color: black;
+    border-color: black;
+}
+
+.icon .input_file {
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.labelFile {
+    margin: auto;
+    padding: 0 60px;
+    border: 2px solid #555;
+    cursor: pointer;
+    border-radius: 5px;
+}

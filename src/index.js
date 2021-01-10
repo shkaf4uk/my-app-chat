@@ -1,15 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import store from "./redux/redux_store";
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import MainApp from "./App";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+let rerenderEntriesTree = () => {
+    ReactDOM.render(
+        <MainApp/>,
+        document.getElementById('root')
+    );
+}
+
+rerenderEntriesTree();
+
+store.subscribe(() => {
+    rerenderEntriesTree();
+});
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

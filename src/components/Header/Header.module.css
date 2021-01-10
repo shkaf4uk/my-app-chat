@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+.header {
+    grid-area: header;
+    background-color: #8f93ff;
+}
+
+.header img {
+    height: 100%;
+}
+
+.header span {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.header .web {
+    position: absolute;
+    margin-top: 5px;
+    font-family: 'Yellowtail', cursive;
+}
+
+.header .chat {
+    position: absolute;
+    margin-top: 25px;
+    font-family: 'Yellowtail', cursive;
+}
+
+.loginBlock {
+    float: right;
+    padding: 10px;
+}
+
+.loginBlock div .login_user {
+    font-size: 18px;
+    text-transform: uppercase;
+}
