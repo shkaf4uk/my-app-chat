@@ -5,7 +5,6 @@ import {Field, reduxForm} from "redux-form";
 import {Textarea} from "../../../utils/FormControls/FormControls";
 
 const MyPosts = (props) => {
-    console.log(props)
     let postsElements = props.posts.map((post, index) =>
         (<Post key={index} id={index}
                massage={post.massage} likesCount={post.likesCount} profile={props.profile} />));

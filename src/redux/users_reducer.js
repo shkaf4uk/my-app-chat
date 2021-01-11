@@ -65,14 +65,12 @@ export const getUsers = (currentPage, pageSize) => async (dispatch) => {
 }
 
 export const Follow = (userId) => async (dispatch) => {
-    const response = await usersAPI.follow(userId);
-    console.log('response', response)
+    await usersAPI.follow(userId);
     dispatch(follow(userId))
 }
 
 export const UnFollow = (userId) => async (dispatch) => {
-    const response = await usersAPI.unFollow(userId);
-    console.log('response', response)
+    await usersAPI.unFollow(userId);
     dispatch(unFollow(userId))
 }
 

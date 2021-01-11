@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
-import {BrowserRouter, Route, withRouter} from "react-router-dom";
+import {HashRouter, Route, withRouter} from "react-router-dom";
 import Login from "./components/Login/Login";
 import {connect, Provider} from "react-redux";
 import {initializeApp} from "./redux/app_reducer";
@@ -39,14 +39,10 @@ class App extends React.Component {
                     <HeaderContainer/>
                     <Navbar/>
                     <div className={'app-wrapper-content'}>
-                        <Route path={'/dialogs'}
-                               render={WithSuspense(DialogsContainer)}/>
-                        <Route path={'/profile/:userId?'}
-                               render={WithSuspense(ProfileContainer)}/>
-                        <Route path={'/users'}
-                               render={WithSuspense(UsersContainer)}/>
-                        <Route path={'/login'}
-                               render={() => <Login/>}/>
+                        <Route path={'/dialogs'} render={WithSuspense(DialogsContainer)}/>
+                        <Route path={'/profile/:userId?'} render={WithSuspense(ProfileContainer)}/>
+                        <Route path={'/users'} render={WithSuspense(UsersContainer)}/>
+                        <Route path={'/login'} render={() => <Login/>}/>
 
                         <Route path={'/news'} component={News}/>
                         <Route path={'/music'} component={Music}/>
@@ -69,11 +65,11 @@ let AppContainer = compose(
 )(App);
 
 let MainApp = (props) => {
-    return (<BrowserRouter>
+    return (<HashRouter>
         <Provider store={store}>
             <AppContainer />
         </Provider>
-    </BrowserRouter>)
+    </HashRouter>)
 }
 
 export default MainApp;

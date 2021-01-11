@@ -20,5 +20,11 @@ export const Textarea = (props) => {
 
 export const Input = (props) => {
     const {input, meta, ...restProps} = props;
+    if (input.name === "email") {
+        input.value = 'shafarenkomaksym@gmail.com';
+    }
+    if (input.name === "password") {
+        input.value = '1q2w3e4r5t';
+    }
     return <FormControl {...props}><input {...input} {...restProps} /></FormControl>
 }

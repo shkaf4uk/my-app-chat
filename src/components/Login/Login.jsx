@@ -28,10 +28,12 @@ const LoginForm = (props) => {
     return (
             <form onSubmit={props.handleSubmit}>
                 <div>
-                    <Field name={'email'} placeholder={"Email"} component={Input} validate={[required]}/>
+                    {/*<Field name={'email'} placeholder={"Email"} component={Input} validate={[required]}/>*/}
+                    <Field name={'email'} placeholder={"Email"} component={Input} />
                 </div>
                 <div>
-                    <Field type={'password'} name={'password'} placeholder={"Password"} component={Input} validate={[required]}/>
+                    {/*<Field type={'password'} name={'password'} placeholder={"Password"} component={Input} validate={[required]}/>*/}
+                    <Field type={'password'} name={'password'} placeholder={"Password"} component={Input} />
                 </div>
                 <div className={style.rememberMe}>
                     <Field name={'rememberMe'} type={"checkbox"} component={Input} />
